@@ -21,3 +21,15 @@ def test_adding_friend_multiple_times_does_not_create_duplicate():
 
     # Assert
     assert kendall.friends == [simon]
+
+def test_adding_movie_to_watchist_multiple_times_does_not_create_duplicate():
+    # Arrange
+    movie = movie("Kendall")
+    simon = Person("Simon")
+
+    # Act
+    kendall.add_friend(simon)
+    kendall.add_friend(simon)
+
+    # Assert
+    assert kendall.friends == [simon]
